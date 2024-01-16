@@ -30,15 +30,15 @@
         <form id="formulario" class="caja">
             <div class="mb-3">
             <label class="form-label textogrande">NETO</label><label class="textopequeño">(sin IVA)</label>
-            <input type="number" class="form-control" id="montoNeto" pattern="[0-9]*" inputmode="numeric" oninput="validarNumero(this)" placeholder="0">
+            <input type="number" class="form-control" id="montoNeto" pattern="[0-9]*" inputmode="numeric" oninput="validarNumero(this)" placeholder="0"  maxlength="22">
             </div>
             <div class="mb-3">
                 <label class="form-label textogrande">IVA</label><label class="textopequeño iva">(19%)</label>
-                <input type="number" class="form-control" id="porcentaje" readonly>
+                <input type="number" class="form-control" id="porcentaje" readonly placeholder="0">
                 </div>
                 <div class="mb-3">
                 <label class="form-label textogrande">TOTAL</label><label class="textopequeño">(con IVA)</label>
-                <input type="number" class="form-control" id="montoTotal" readonly>
+                <input type="number" class="form-control" id="montoTotal" readonly placeholder="0">
                 </div>    
             <div id="botones">
             <!--<button type="submit" class="btn btn-success" id="botones">CALCULAR</button>-->
