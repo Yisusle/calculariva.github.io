@@ -117,12 +117,24 @@ input:read-only:hover{
 
 /*RESPONSIVE*/
 /*Desde la anchura 0px hasta la anchura 1000px de pantalla va haber estos estilos*/
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
     /*SE EJECUTARAN ESTOS ESTILOS*/
-    label{
+    label {
         display: block !important;
-        margin: 0 auto; 
+        margin: 0 auto;
         text-align: center;
     }
+    .caja {
+        width: 80%;
+        height: auto;
+    }
+    .botones {
+        width: 60%;
+    }
+}
 
+@media (max-width: 500px) {
+    .botones {
+        width: 50%;
+    }
 }
