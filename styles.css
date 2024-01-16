@@ -129,6 +129,19 @@ input:read-only:hover {
     margin: 0 auto;
     text-align: center;
   }
+  .caja {
+    width: 80%;
+    height: auto;
+  }
+  .botones {
+    width: 60%;
+  }
+}
+@media (max-width: 500px) {
+  .botones {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
+
