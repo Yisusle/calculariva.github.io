@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora De IVA</title>
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <!--Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--Jquery UI-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/theme.min.css"/>
+
+    <!--Mio-->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <h1>Calculadora de Iva</h1>
+    <h3>Ingresa el monto NETO:</h3>
+    <div id="contenido">
+        <form id="formulario" class="caja">
+            <div class="mb-3">
+            <label class="form-label textogrande">NETO</label><label class="textopequeño">(sin IVA)</label>
+            <input type="number" class="form-control" id="montoNeto" pattern="[0-9]*" inputmode="numeric" oninput="validarNumero(this)" placeholder="0">
+            </div>
+            <div class="mb-3">
+                <label class="form-label textogrande">IVA</label><label class="textopequeño iva">(19%)</label>
+                <input type="number" class="form-control" id="porcentaje" readonly>
+                </div>
+                <div class="mb-3">
+                <label class="form-label textogrande">TOTAL</label><label class="textopequeño">(con IVA)</label>
+                <input type="number" class="form-control" id="montoTotal" readonly>
+                </div>    
+            <div id="botones">
+            <!--<button type="submit" class="btn btn-success" id="botones">CALCULAR</button>-->
+            <button type="reset" class="btn btn-warning botones">LIMPIAR</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
