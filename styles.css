@@ -124,7 +124,7 @@ input:read-only:hover {
 /*Desde la anchura 0px hasta la anchura 1000px de pantalla va haber estos estilos*/
 @media (max-width: 1000px) {
   /*SE EJECUTARAN ESTOS ESTILOS*/
-  label {
+ label {
     display: block !important;
     margin: 0 auto;
     text-align: center;
@@ -140,6 +140,10 @@ input:read-only:hover {
 @media (max-width: 500px) {
   .botones {
     width: 50%;
+    
+  }
+  h1 {
+    font-size: 40px !important;
   }
 }
 
