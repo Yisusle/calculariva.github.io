@@ -1,87 +1,105 @@
 // Variables
 $fondo: url(imgs/fondo.png);
 $color-sombra-texto: 3px 0px 7px rgba(13, 25, 65, 0.8), -3px 0px 7px rgba(30, 48, 99, 0.8), 0px 4px 7px rgba(57, 86, 216, 0.8);
-$color-sombre-caja: 0px 25px 80px rgba(0, 0, 0, 0.5);
+$color-sombra-caja: 0px 25px 80px rgba(0, 0, 0, 0.5);
+$fondo-footer: rgba(0, 0, 0, 0.05);
 
-*{
+* {
     text-decoration: none;
 }
 
-body{
+body {
+    min-height: 100vh; 
+    /*display: flex;
+    flex-direction: column;*/
     background-image: $fondo;
+    margin: 0;
 }
 
-h1,h2,h3{
+h1, h2, h3 {
     text-align: center;
 }
 
-h1{
+h1 {
     font-size: 50px !important;
     font-weight: bold !important;
     padding-top: 10px;
-    letter-spacing: 5px; 
+    letter-spacing: 5px;
     text-transform: uppercase;
     color: white;
     text-shadow: $color-sombra-texto;
 }
-h3{
+
+h3 {
     padding-bottom: 10px;
     font-style: italic;
     color: white;
     text-shadow: $color-sombra-texto;
 }
-#contenido{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#botones{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#cabecera{
+    display: block;
+    height: 10%;
     width: 100%;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
+
+#contenido {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
 }
 
-input[type=number] { 
-    -moz-appearance:textfield; 
+#botones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    width: 100%;
 }
-input{
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input {
     font-weight: bold;
     background-color: white !important;
 }
-.textopequeño{
+
+.textopequeño {
     padding-left: 1px;
     letter-spacing: 0.5px;
     font-style: italic;
     font-size: 12px;
 }
 
-.textogrande{
+.textogrande {
     font-weight: bold;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     font-size: 23px;
 }
+
 .caja {
     width: 40%;
     height: 420px;
 }
 
-#formulario{
+#formulario {
     padding-top: 2% !important;
     padding-bottom: 10px;
     background-color: aliceblue;
     padding: 10px;
     border-radius: 20px;
-    box-shadow: $color-sombre-caja;
+    box-shadow: $color-sombra-caja;
 }
 
-.botones{
+.botones {
     width: 40%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -89,10 +107,11 @@ input{
     font-size: 20px;
     text-transform: uppercase;
     margin: 10px;
+    margin-bottom: 0px;
 }
 
-button{
-    letter-spacing: 2px;    
+button {
+    letter-spacing: 2px;
     font-weight: bold;
 }
 
@@ -102,22 +121,41 @@ input:-moz-read-only {
     background: white !important;
 }
 
-input:read-only:focus{
+input:read-only:focus {
     border-color: #ced4da;
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-input:read-only:hover{
+
+input:read-only:hover {
     cursor: text;
 }
-::placeholder{
+
+::placeholder {
     color: black !important;
 }
 
+footer{
+    background-color: $fondo-footer;
+}
+
+footer div .text-muted{
+    color: white !important ;
+    letter-spacing: 3px;
+    opacity: 0.7;
+    text-shadow: $color-sombra-texto;
+    transition: all 0.5s;
+}
+
+footer div .text-muted:hover{
+    font-size: 18px;
+}
+
+
 /*RESPONSIVE*/
-/*Desde la anchura 0px hasta la anchura 1000px de pantalla va haber estos estilos*/
-@media (max-width: 1000px) {
+/*Desde la anchura 0px hasta la anchura 1200px de pantalla va haber estos estilos*/
+@media (max-width: 1200px) {
     /*SE EJECUTARAN ESTOS ESTILOS*/
     label {
         display: block !important;
@@ -128,13 +166,21 @@ input:read-only:hover{
         width: 80%;
         height: auto;
     }
+    #botones {
+        padding-top: 0px;
+    }
     .botones {
+        margin-top: 0px;
+        margin-bottom: 10px;
         width: 60%;
     }
-}
-
-@media (max-width: 500px) {
+    }
+    @media (max-width: 500px) {
     .botones {
         width: 50%;
+        
+    }
+    h1 {
+        font-size: 40px !important;
     }
 }
