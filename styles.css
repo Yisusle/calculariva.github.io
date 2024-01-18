@@ -136,8 +136,9 @@ footer {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-footer div .text-muted {
+footer div a {
   color: white !important;
+  text-decoration: none;
   letter-spacing: 3px;
   opacity: 0.7;
   text-shadow: 3px 0px 7px rgba(13, 25, 65, 0.8), -3px 0px 7px rgba(30, 48, 99, 0.8), 0px 4px 7px rgba(57, 86, 216, 0.8);
