@@ -4,7 +4,11 @@
 }
 
 body {
+  min-height: 100vh;
+  /*display: flex;
+  flex-direction: column;*/
   background-image: url(imgs/fondo.png);
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -28,6 +32,12 @@ h3 {
   text-shadow: 3px 0px 7px rgba(13, 25, 65, 0.8), -3px 0px 7px rgba(30, 48, 99, 0.8), 0px 4px 7px rgba(57, 86, 216, 0.8);
 }
 
+#cabecera {
+  display: block;
+  height: 10%;
+  width: 100%;
+}
+
 #contenido {
   display: flex;
   align-items: center;
@@ -38,6 +48,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 10px;
   width: 100%;
 }
 
@@ -92,6 +103,7 @@ input {
   font-size: 20px;
   text-transform: uppercase;
   margin: 10px;
+  margin-bottom: 0px;
 }
 
 button {
@@ -120,11 +132,27 @@ input:read-only:hover {
   color: black !important;
 }
 
+footer {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+footer div .text-muted {
+  color: white !important;
+  letter-spacing: 3px;
+  opacity: 0.7;
+  text-shadow: 3px 0px 7px rgba(13, 25, 65, 0.8), -3px 0px 7px rgba(30, 48, 99, 0.8), 0px 4px 7px rgba(57, 86, 216, 0.8);
+  transition: all 0.5s;
+}
+
+footer div .text-muted:hover {
+  font-size: 18px;
+}
+
 /*RESPONSIVE*/
-/*Desde la anchura 0px hasta la anchura 1000px de pantalla va haber estos estilos*/
-@media (max-width: 1000px) {
+/*Desde la anchura 0px hasta la anchura 1200px de pantalla va haber estos estilos*/
+@media (max-width: 1200px) {
   /*SE EJECUTARAN ESTOS ESTILOS*/
- label {
+  label {
     display: block !important;
     margin: 0 auto;
     text-align: center;
@@ -133,14 +161,18 @@ input:read-only:hover {
     width: 80%;
     height: auto;
   }
+  #botones {
+    padding-top: 0px;
+  }
   .botones {
+    margin-top: 0px;
+    margin-bottom: 10px;
     width: 60%;
   }
 }
 @media (max-width: 500px) {
   .botones {
     width: 50%;
-    
   }
   h1 {
     font-size: 40px !important;
@@ -148,4 +180,3 @@ input:read-only:hover {
 }
 
 /*# sourceMappingURL=styles.css.map */
-
