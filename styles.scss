@@ -140,9 +140,10 @@ footer{
     background-color: $fondo-footer;
 }
 
-footer div .text-muted{
+footer div a{
     color: white !important ;
     letter-spacing: 3px;
+    text-decoration: none;
     opacity: 0.7;
     text-shadow: $color-sombra-texto;
     transition: all 0.5s;
