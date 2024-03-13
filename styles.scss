@@ -43,9 +43,9 @@ h3 {
 }
 
 #cabecera img{
-  margin-bottom: 10px;
-  height: 25px;
-  width: 45px;
+    margin-bottom: 10px;
+    height: 25px;
+    width: 45px;
 }
 
 #contenido {
@@ -155,8 +155,8 @@ footer div a{
     transition: all 0.5s;
 }
 
-footer div .text-muted:hover{
-    font-size: 18px;
+footer div:hover{
+    transform: scale(1.1);
 }
 
 
