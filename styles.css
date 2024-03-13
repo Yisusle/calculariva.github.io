@@ -151,8 +151,8 @@ footer div a {
   transition: all 0.5s;
 }
 
-footer div .text-muted:hover {
-  font-size: 18px;
+footer div:hover{
+  transform: scale(1.1);
 }
 
 /*RESPONSIVE*/
