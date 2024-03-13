@@ -48,7 +48,7 @@ $(document).ready(function () {
     }
 
 });
-
+        /* JAVASCRIP PURO
         const inputmontoNeto = document.getElementById('montoNeto') as HTMLInputElement;
         const montoTotalInput = document.getElementById('montoTotal') as HTMLInputElement;
         const porcentajeInput = document.getElementById('porcentaje') as HTMLInputElement;
@@ -73,5 +73,32 @@ $(document).ready(function () {
                 porcentajeInput.value = porcentaje.toFixed(0);
                 montoTotalInput.value = montoTotal.toFixed(0);
             }
+        });*/
+            //JQUERY
+        $(document).ready(function(){
+            const inputmontoNeto = $('#montoNeto');
+            const montoTotalInput = $('#montoTotal');
+            const porcentajeInput = $('#porcentaje');
+            
+            // Escucha el evento 'input' en el campo de entrada
+            inputmontoNeto.on('input', function () {
+                // Verifica que countrys esté definido y el valor ingresado sea un número
+                if (typeof countrys !== 'undefined') {
+                    let montoNeto = parseInt(inputmontoNeto.val()?.replace(',', '').replace('%', ''), 10) || 0;
+        
+                    // Realiza las operaciones
+                    let porcentaje = montoNeto * (parseInt(countrys.iva) / 100);
+                    let montoTotal = (montoNeto + porcentaje) * 4;
+                    
+                    console.log("iva: ", countrys.iva);
+                    console.log("Monto Neto: ", montoNeto);
+                    console.log("Porcentaje: ", porcentaje);
+                    console.log("Monto Total: ", montoTotal);
+        
+                    // Establece el resultado en otros campos de entrada
+                    porcentajeInput.val(porcentaje.toFixed(0));
+                    montoTotalInput.val(montoTotal.toFixed(0));
+                }
+            });
         });
 });
